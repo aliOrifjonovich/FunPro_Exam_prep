@@ -152,17 +152,18 @@ namespace lastYearExamse_prep
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            var selectedType = ((DataRowView) cbxModelType.SelectedItem).Row;
-            universityDataSet.tb_Module.Addtb_ModuleRow(tbxModelCode.Text,
-                                                        tbxModelName.Text,
-                                                        tbxModelYear.Text,
-                                                        (universityDataSet.)selectedType);
-            
+            var selectedType = ((DataRowView)cbxModuleType.SelectedItem).Row;
+
+            universityDataSet.tb_Module.Addtb_ModuleRow(
+                tbxModelCode.Text,
+                tbxModelName.Text,
+                Int32.Parse(tbxModuleYear.Text),
+                (UniversityDataSet.tb_ModuleTypeRow)selectedType);
         }
 
         private void tbxFilter_TextChanged(object sender, EventArgs e)
         {
-            tb_ModuleBindingSource.Filter = $"ModaleName LIKE '{tbxFilter.Text}%'";
+            tb_ModuleBindingSource.Filter = $"ModuleName LIKE '{tbxFilter.Text}%'";
         }
     }
 }
