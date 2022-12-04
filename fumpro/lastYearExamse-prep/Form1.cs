@@ -79,7 +79,7 @@ namespace lastYearExamse_prep
         {
             tb_ModuleBindingSource.MoveLast();
         }
-
+        
         private void EnableDisableButton(object sender, EventArgs e)
         {
             if (tb_ModuleBindingSource.Position == 0)
@@ -103,7 +103,7 @@ namespace lastYearExamse_prep
                 btnLast.Enabled = true; 
             }
         }
-
+        // Bu module changeni olish uchun design bolimining oxirida Modulebindingsource orqali chaqmoq tugmasi bilan curren changega ikki marta bosih bilan chiqadi
         private void tb_ModuleBindingSource_CurrentChanged(object sender, EventArgs e)
         {
             EnableDisableButton(sender, e);
