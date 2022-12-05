@@ -113,7 +113,7 @@ namespace Childrens
                 var userResponse = MessageBox.Show("Sure!", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (userResponse == DialogResult.Yes)
                 {
-                    tb_ChildBindingSource.RemoveAt(0);
+                    tb_ChildBindingSource.RemoveCurrent(0);
                     MessageBox.Show("Deleted"); 
                 }
             }
